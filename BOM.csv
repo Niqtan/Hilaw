@@ -1,48 +1,51 @@
 Comment,Designator,Footprint,LCSC Part #,Total (USD)
-1µ Unpolarized capacitor,"C1,C2,C3,C4,C6,C8,C17",C_0603_1608Metric,C1592,0.0224
-22µ Polarized capacitor,"C5,C10,C13,C14,C20,C21,C22",CP_Elec_6.3x5.4,C7469954,0.2331
-47n Unpolarized capacitor,C7,C_0402_1005Metric,C1525,0.0011
-0.1µ Unpolarized capacitor,"C9,C23",C_0603_1608Metric,C1592,0.0064
-4.1p Unpolarized capacitor,C11,C_0402_1005Metric,C1525,0.0011
-10µ Unpolarized capacitor,C12,C_0805_2012Metric,C1713,0.0087
-4.7μ Unpolarized capacitor,"C15,C16,C18",C_0603_1608Metric,C1592,0.0096
-87p Unpolarized capacitor,C19,C_0402_1005Metric,C1525,0.0011
-"PTVS17VS1UR,115 Zener diode",D1,Nexperia_CFP3_SOD-123W,C396100,0.1944
-XL-1608PGC-06 Light emitting diode,"D2,D3,D4",LED_0603_1608Metric,C7371905,0.0279
-USB_C_Receptacle_GCT_USB4125-xx-x-0190_6P_TopMnt_Horizontal,J2,TYPE-C 6P LCH10.0 USB Power-Only 6P Type-C Receptacle connector,C5187470,0.0869
-"USE-702528-500PCBJST Generic connector, single row, 01x02, script generated",J4,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,C5251182,0.1227
-"Conn_01x24_Pin Generic connector, single row, 01x24, script generated",J6,PinHeader_1x24_P2.54mm_Vertical,C7430380,0.11
-"Conn_01x03_Pin Generic connector, single row, 01x03, script generated",J7,PinHeader_1x03_P2.54mm_Vertical,C49257,0.0153
-"Conn_01x06_Pin Generic connector, single row, 01x06, script generated",J8,PinHeader_1x06_P2.54mm_Vertical,C37208,0.0314
-"Conn_01x01_Pin Generic connector, single row, 01x01, script generated",J10,PinHeader_1x01_P2.54mm_Vertical,C81276,0.0069
-2.2µ Inductor,L2,L_0603_1608Metric,C1033,0.0093
-2.2µ Inductor,L3,IND_FXL0630_CMT,C167211,0.1191
-"2N7002BK, 215 0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92",Q1,TRANS_PMV130ENEAR,C458143,0.1463
-56K Resistora,"R1,R2",R_0603_1608Metric,C23206,0.0022
-1k Resistor,"R3,R8,R17,R19",R_0603_1608Metric,C11702,0.002
-10k Resistor,"R4,R5,R18,R20,R22",R_0603_1608Metric,C25804,0.0045
-310k Resistor,R6,R_0603_1608Metric,C25803,0.001
-330K Resistor,R7,R_0603_1608Metric,C25803,0.001
-10K Resistor,"R9,R10",R_0603_1608Metric,C25804,0.0018
+1µ Unpolarized capacitor,"C1,C2,C3,C4,C6,C8,C17",C_0603_1608Metric,C1592,IN PCBA
+22µ Polarized capacitor,"C5,C10,C13,C14,C20,C21,C22",CP_Elec_6.3x5.4,C7469954,IN PCBA
+47n Unpolarized capacitor,C7,C_0402_1005Metric,C1525,IN PCBA
+0.1µ Unpolarized capacitor,"C9,C23",C_0603_1608Metric,C1590,IN PCBA
+4.1p Unpolarized capacitor,C11,C_0402_1005Metric,C1525,IN PCBA
+10µ Unpolarized capacitor,C12,C_0805_2012Metric,C1713,IN PCBA
+4.7μ Unpolarized capacitor,"C15,C16,C18",C_0603_1608Metric,C1705,IN PCBA
+87p Unpolarized capacitor,C19,C_0402_1005Metric,C1525,IN PCBA
+"PTVS17VS1UR,115 Zener diode",D1,Nexperia_CFP3_SOD-123W,C396100,IN PCBA
+XL-1608PGC-06 Light emitting diode,"D2,D3,D4",LED_0603_1608Metric,C7371905,IN PCBA
+USB_C_Receptacle_GCT_USB4125-xx-x-0190_6P_TopMnt_Horizontal,J2,TYPE-C 6P LCH10.0 USB Power-Only 6P Type-C Receptacle connector,C5187470,IN PCBA
+"USE-702528-500PCBJST Generic connector, single row, 01x02, script generated",J4,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,C5251182,IN PCBA
+"Conn_01x24_Pin Generic connector, single row, 01x24, script generated",J6,PinHeader_1x24_P2.54mm_Vertical,C7430380,IN PCBA
+"Conn_01x03_Pin Generic connector, single row, 01x03, script generated",J7,PinHeader_1x03_P2.54mm_Vertical,C49257,IN PCBA
+"Conn_01x06_Pin Generic connector, single row, 01x06, script generated",J8,PinHeader_1x06_P2.54mm_Vertical,C37208,IN PCBA
+"Conn_01x01_Pin Generic connector, single row, 01x01, script generated",J10,PinHeader_1x01_P2.54mm_Vertical,C81276,IN PCBA
+2.2µ Inductor,L2,L_0603_1608Metric,C1033,IN PCBA
+2.2µ Inductor,L3,IND_FXL0630_CMT,C167211,IN PCBA
+"2N7002BK, 215 0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92",Q1,TRANS_PMV130ENEAR,C458143,IN PCBA
+56K Resistora,"R1,R2",R_0603_1608Metric,C23206,IN PCBA
+1k Resistor,"R3,R8,R17,R19",R_0603_1608Metric,C11702,IN PCBA
+10k Resistor,"R4,R5,R18,R20,R22",R_0603_1608Metric,C25804,IN PCBA
+310k Resistor,R6,R_0603_1608Metric,C23137,IN PCBA
+330K Resistor,R7,R_0603_1608Metric,C23137,IN PCBA
+10K Resistor,"R9,R10",R_0603_1608Metric,C25804,IN PCBA
 700K Resistor,R11,R_0603_1608Metric,"C25606
-",0.0005
-240k Resistor,R12,R_0603_1608Metric,C4197,0.001
-53.6k Resistor,R13,R_0603_1608Metric,"C137646
-",0.001
-100k Resistor,R14,R_0603_1608Metric,C25803,0.001
-30k Resistor,R15,R_0603_1608Metric,C18681,0.0008
-4k7 Resistor,R16,R_0603_1608Metric,C100444,0.0003
-910k Resistor,R21,R_0603_1608Metric,C23263,0.0011
-NCU18XH103F6SRB,RT1,TRES_NCU18XH103F6SRB_MUR,C162670,0.0672
-SKRPABE010,"S1,S2",SW_SKRPABE010,C115360,0.1368
-"ESP32-WROOM-32 RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD",U1,ESP32-WROOM-32,"C82899",4.1985
-TPS61088RHLR,U3,RHL0020A,C87357,0.525
-RT8059GJ5,U5,TSOT-23-5_RIT,C20542,0.1395
-MMBT2222AM3T5G,"U6,U7",SOT-723_0P85X1P25_ONS-M,C896289,0.1176
+",IN PCBA
+240k Resistor,R12,R_0603_1608Metric,C4197,IN PCBA
+53.6k Resistor,R13,R_0603_1608Metric,C23074,IN PCBA
+100k Resistor,R14,R_0603_1608Metric,C25803,IN PCBA
+30k Resistor,R15,R_0603_1608Metric,C18681,IN PCBA
+4k7 Resistor,R16,R_0603_1608Metric,C100444,IN PCBA
+910k Resistor,R21,R_0603_1608Metric,C23263,IN PCBA
+NCU18XH103F6SRB,RT1,TRES_NCU18XH103F6SRB_MUR,C162670,IN PCBA
+SKRPABE010,"S1,S2",SW_SKRPABE010,C115360,IN PCBA
+"ESP32-WROOM-32 RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD",U1,ESP32-WROOM-32,"C82899",IN PCBA
+TPS61088RHLR,U3,RHL0020A,C87357,IN PCBA
+RT8059GJ5,U5,TSOT-23-5_RIT,C20542,IN PCBA
+MMBT2222AM3T5G,"U6,U7",SOT-723_0P85X1P25_ONS-M,C896289,IN PCBA
 BQ24075RGTR,U8,RGT16_1P7X1P7,"
-C15464",1.14
-NOT IN PCB,,,,
-ARDUCAM (B0401),N/A,N/A,N/A,53.66
-GOOJPRT QR204 Thermal Printer,N/A,N/A,N/A,20.18
-TFT_320x240 ( provided) ,N/A,N/A,N/A,0
-,,,,81.3365
+C15464",IN PCBA
+NOT IN PCB,,,,IN PCBA
+ARDUCAM (B0401),N/A,N/A,N/A,$53.66
+GOOJPRT QR204 Thermal Printer,N/A,N/A,N/A,$20.18
+TFT_320x240 ( provided) ,N/A,N/A,N/A,$0
+,,,,
+Shipping & Etc,,,,
+Aliexpress Thermal Printer ,,,,$16.87
+PCBA Assembly,,,,$102.55
+,,,,$193.26
