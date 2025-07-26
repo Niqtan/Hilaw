@@ -53,6 +53,7 @@ Orientation: 30-45 degrees
 thats pretty much it 
 
 ## BOM
+[View the bom](BOM.csv)
 
 ## Firmware
 Have not yet started on the firmware. I am going to choose the Arduino IDE in order to program the ESP32-WROOM-32 since it is much more convenient for prototyping.
