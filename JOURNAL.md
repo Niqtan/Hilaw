@@ -18,15 +18,136 @@ in digikey.
 
 Here are some obsidian notes:
 
+Project Making - Building your own Instax Camera - 07-05-25
 
+Project Name: Hilaw
+
+Features:
+- OLED screen preview (Hybrid between digital and analog)
+	- Allow users to choose when to print it
+- Press a button -> take a pictures
+- Adjust settings
+- Storage (SD Card)
+- Processing on a thermal printer
+- Power
+	- Latching circuit
+	- USB-C w SD CARD
+
+Parts needed:
+- ArduCAM
+- TFT LCD
+- Thermal Printer
+- MCU (ESP BOARD SERIES)
+	- ESP-32-S3
+- Power system
+
+
+Components - Camera Module - 07-07-25
+
+Characteristics
+- Megapixels
+	- Megapixels are usually a metric for cropping
+	- Basically, if you crop something, it will still retain its quality 
+
+What makes a better image quality?
+- Attributed to lower noise
+- Better colours
+- Dynamic Range
+
+
+Great camera modules:
+- ESP32-CAM
+
+The good thing about ESP32-CAM:
+- Cost-effective
+- Doesn't take too much dev time
+- Fits right perfectly
+- Option to be coded with the ESP board series
+
+Cons of ESP32-CAM:
+- Video streaming wasnt the best
+	- The resolution wasnt the best
+
+Comparing this with the Raspberry Pi Cam V2
+- RP
+	- Image quality - much better due to SONY sensor
+	- 8 MP
+
+Why is the ESP32-CAM stitll much better?
+- Its compact and wireless
+- Not that complex for this project
+
+For this project, I would pick a camera that is:
+- Plug and play, fast *development*
+- Has the bare minimum
+- Doesn't have to have manual image control
+
+
+Ends there
 
 Total hours spent: 5 hours
 
 # Entry #1 - 07-19-25 - Researching more components
 
+You guessed it! More research!
+
+What is thermal printing?
+- Imagine the receipts, thermal printing is used to print those
+
+By using the same principle of thermal printers, we can:
+- Print instantly using heat
+
+
+Cons of thermal printing
+- They start to fade away
+- Depends on paper
+
+Thermal Printer vs Inkjet
+- Inkjet
+	- Paper jam
+- Thermal Printers
+	- Embedded Thermal Printer V2.0
+
+Components - LCD vs OLED Screen - 07-07-25
+
+Feature focused on: Preview of the camera's printed image
+
+What is OLED?
+- Display technology that exhibits amazing contrast since the pixels turn off to display black
+- Composed of organic material that emits light when an electric current is applied
+
+
+LCD
+- Utilizes a backlight that shines through liquid crystals to create an image
+- Control the amount of light that passes through, dictating the color and brightness of pixels
+
+
+Benchmarks
+
+Contrast ratio and black levels
+- OLED technology outshiens LCD when it comes to this
+- Each pixel on the OLED screen is independently lit,
+
+LCD
+- On the other hand, LCDs, regardless of backlight technology used, always emit some level of light even when trying to display black, leading a lower contrast ratio
+
+Lifespan and Burn-in
+- LCD displays are not susceptible to these issues
+- OLED
+	- The organic materials in OLED dipslays can degrade over time
+	- Moreover, if static images are displayed for extended periosd, OLED screens can suffer from burn-in
+		- Where ghost images are permanently imprinted in the screens
+
+Energy Efficiency
+- Another area where LCDs tend to excel
+	- Generally consume less power than OLEDs when displaying bright or white backgrounds
+	- However, the same cannot be said when dark or black images are on the screen as OLEDs consume less power 
+
+Conclusion: 
+- We're gonna use a TFT LCD
+	- Difference between a TFT LCD and a normal one is that its much more robust (TFT LCD) due to new technology
 
 Total hours spent: 5 hours
-
 
 # Entry #2 - 07-22-25 - Researching Power Electronics & Doing the Schematic
 
@@ -35,7 +156,36 @@ For this entry, I've started doing the schematic. I only focused on making this 
 Here is another peek of my obisdian note for power calculations:
 
 
+ESP32-WROOM-32 Power Characteristics:
+- Power supply voltage -> -0.3V - 3.6V (absolute max)
+- Minimum power supply current -> >= 500mAh
+- Probably 800mAh to accomodate for the other components
 
+ILI9341 LCD Characteristics (TFT LCD)
+- Supply voltage (Logic): 3.3V (Absolute maximum characteristic)
+- Around 100mA
+
+ARDUCAM (Camera sensor)
+- Supply voltage: 3.3V to 5V
+- Peak current (Working): 154mA
+
+
+Thermal Printer (DF Robot Embedded printer)
+- Working voltage: 9V
+- Working current: 1.5A - 2A when printing
+
+What to do:
+- Since the thermal printer requires a lot more power than the other components, the power system's  requirements would have to be:
+	- Battery capacity: 2Ah with discharge rate of 2C 
+		  discharge rate is important because it dictates the rate of which it delivers electrical energy
+		  That basically means the speed of which it discharges the current we need
+		  So lets say we had a 1Ah battery but the charge is only 0.5C, well that would only deliver 500mA
+
+
+Basic principle of boost converter:
+- Boost converters do not boost current, they boost voltage at the expense of current
+- Basic principle:
+	- V in  * I in = V out * Iout
 
 ![alt text](Screenshots/2.png)
 
