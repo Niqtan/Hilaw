@@ -7,7 +7,7 @@ created_at: "2025-07-08"
 
 | Date started: July 7, 2025
 
-Total hours spent: 37 hours
+Total hours spent: 41 hours
 
 # Entry #0 - 07-07-25
 
@@ -231,8 +231,30 @@ Here is what it looks like:
 ![alt text](Screenshots/5.png)
 
 
-That's pretty much it!
-
---END--
-
 total hours spent: 6 hours
+
+# Entry 7 - 07-29-25 - Ordering PCB & Other Stuff
+
+For this entry, I've ordered most of what I need to assemble this!
+
+- ✔️ PCB
+- ✔️ Thermal Printer
+- ✔️ Camera (albeit, differnet one since budget didn't reach)
+
+See pictures:
+![alt text](Screenshots/8.png)
+![alt text](Screenshots/9.jpg)
+
+
+Total hours spent: 1 hour
+
+# Entry 8 -  07-31-25 - Working with the firmware 
+
+For this entry, I've decided to get a jumpstart on the firmware. 
+
+I mainly got to the initialization part of all components working. For instance, making the camera's initial process work, and the TFT display's display screen to be able to display something.
+
+Besides that, I've also been doing a ton of research on how to make this work, and I think I've got an idea on how to.
+
+![alt text](Screenshots/10.png)
+Total hours spent: 3 hours
