@@ -7,7 +7,7 @@ created_at: "2025-07-08"
 
 | Date started: July 7, 2025
 
-Total hours spent: 41 hours
+Total hours spent: 42 hours
 
 # Entry #0 - 07-07-25
 
@@ -258,3 +258,14 @@ Besides that, I've also been doing a ton of research on how to make this work, a
 
 ![alt text](Screenshots/10.png)
 Total hours spent: 3 hours
+
+# Entry 9 - 08-01-25 - More Firmware Loading...
+
+Yep! So for this session, I just mainly wanted to work on the firmware.
+
+I specifically worked on polishing the shutter button's logic, and about how to convert the OV2640's logic to a RGB Bit Depth Data for the TFT display to interpret, hence streaming it on the display.
+
+Well, for streaming, it is quite WIP for now. 
+
+![alt text](Screenshots/11.png)
+Total hours spent: 1 hour

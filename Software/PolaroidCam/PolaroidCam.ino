@@ -52,15 +52,18 @@ Adafruit_ILI9341 tft = Adafruit_ILI9341(CS, DC, RST);
 
 /*
 Okay  so here's how I think we're going to do it:
-1. We want to be able to configure the camera first using the library esp_camera.h
+1. We want to be able to configure the camera first using the library esp_camera.h - DONE
 2. Afterwards, we want to be able to get a RGBDepthMap of the output using  a function from the Adafruit GFX (RGB bit map)
 3. Pass the values of that in the TFT display
 */
 
 void setup() {
   //Initialize all communication protocols here
+  Wire.begin();
+  SPI.begin();
   Serial.begin(115200);
 
+  //Configure the camera settings
   camera_config_t camera_config = {
     .pin_d0 = D0,
     .pin_d1 = D1,
@@ -81,38 +84,80 @@ void setup() {
     .xclk_freq_hz = 20000000,
     .pixel_format = PIXFORMAT_RGB565,
     .frame_size = FRAMESIZE_QVGA,
-    .config_fb_count = 1,
+    .jpeg_quality = 12,
+    .fb_count = 1,
 
-  };
-
+  }; 
+  
+  //Initialize the camera using the settings 
   esp_err_t ret_val = esp_camera_init(&camera_config);
   if (ret_val != ESP_OK) {
-    Serial.printf("Camera did not initialize properly with erorr 0x%x", ret_val);
+    Serial.printf("Camera did not initialize properly with error 0x%x", ret_val);
     return;
   }
 
-  Serial.printf("Camera initialized properly.")
-  /* Before intializing SPI, you must have these variables:
-  - The ILI9341 is stable up to 30MHz
-  - 
-  */
-  Wire.begin();
+  Serial.printf("Camera initialized properly.");
 
-  tft.begin()
-  tft.setRotation(1)
+  //Begin communication with the TFT
+  tft.begin();
+  tft.setRotation(1);
+  tft.fillScreen(ILI9341_BLACK);
 
 }
 
 void loop() {
-    // Loop to check if the shutter button has been pressed
+  //Display the current RGB depth map in order to preview the photo
+
+  
+  // Loop to check if the shutter button has been pressed
   if (SHUTTER_BUTTON == 1) {
+    Serial.println("Shutter button pressed!")
+    Serial.println("Taking a picture...")
     camera_fb_t *fb = esp_camera_fb_get;
     if (!fb) {
       Serial.printf("Picture was not taken properly.");
       return;
     }
+    Serial.println("Photo captured successfully!")
+
+    esp_camera_fb_return(fb)
+
+    while *(SHUTTER_BUTTON == 1) {
+      delay(10);
+    }
+
+    //Print out the photo using the thermal printer
+
+    Serial.println("Ready for next photo!");
   }
 
+  delay(50);
   //Display the output on the TFT display
   
+}
+
+void setup_video_stream() {
+  
+}
+
+void get_RGB_Data() {
+  Serial.println("Getting the RGB Bit Depth Map data...")
+
+  camera_fb_t *fb = esp_camera_fb_get;
+    if (!fb) {
+      Serial.printf("Picture was not taken properly.");
+      return;
+    }
+
+    Serial.println("Checking if format is RGB565...")
+    //Utilizing the frame buffer structure, we are able to get data about each image which makes up a video
+  if (fb->format == PIXFORMAT_RGB565) {
+    uint16_t *RGB565_data = (uint16_t) *fb->buf;
+
+
+
+  }
+
+  esp_camera_fb_return(fb)
+
 }
