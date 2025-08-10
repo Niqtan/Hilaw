@@ -17,20 +17,19 @@
 
 #define SCL 22 
 #define SDA 21
-#define PWDN 2
-#define VSYNC 23
+#define PWDN 18
+#define VSYNC 26
 #define HREF 25
-#define PCLK 26 
-#define XCLK 19
-#define RST 18
+#define PCLK 19
+#define RST 23
 #define D0 17
-#define D1 16
-#define D2 15
-#define D3 14
-#define D4 13
-#define D5 12
-#define D6 5
-#define D7 4
+#define D1 13
+#define D2 16
+#define D3 12
+#define D4 15
+#define D5 4
+#define D6 14
+#define D7 2
 
 
 //Thermal Printer (TTL)
@@ -38,11 +37,11 @@
 #define TX 1
 
 // TFT Display (SPI)
-#define MISO 32
+#define MISO 35
 #define MOSI 33
 #define SCK 34
-#define CS 35
-#define DC 27
+#define CS 27
+#define DC 32
 #define RST 0
 
 const int SPIMAXFREQ = 3000000

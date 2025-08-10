@@ -7,7 +7,7 @@ created_at: "2025-07-08"
 
 | Date started: July 7, 2025
 
-Total hours spent: 42 hours
+Total hours spent: 44 hours
 
 # Entry #0 - 07-07-25
 
@@ -269,3 +269,14 @@ Well, for streaming, it is quite WIP for now.
 
 ![alt text](Screenshots/11.png)
 Total hours spent: 1 hour
+
+# Entry 10 - 08-10-25 - All stuff arrived & Assembling prototype
+
+![alt text](Screenshots/12.png)
+
+Yay! So for this session, the parts have officially arrived (all of em).
+
+So once that happened, I decided to go and assemble the prototype with the right connections. I planned to connect all the connections first with jumper wires first and then we can test out that firmware.
+![alt text](Screenshots/13.png)
+
+Total Hours spent: 2 hours
