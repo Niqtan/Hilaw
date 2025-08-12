@@ -7,7 +7,7 @@ created_at: "2025-07-08"
 
 | Date started: July 7, 2025
 
-Total hours spent: 44 hours
+Total hours spent: 46 hours
 
 # Entry #0 - 07-07-25
 
@@ -280,3 +280,23 @@ So once that happened, I decided to go and assemble the prototype with the right
 ![alt text](Screenshots/13.png)
 
 Total Hours spent: 2 hours
+
+# Entry 11 - 08-12-25 - Finishing up the PCB assembly and checking connections
+
+Yep! Did some PCB assembly and some checking of connections.
+
+Huh, but for some odd reason, why isn't my battery working? To be exact, when I connect the battery to the JST connector, why do I not get any readings from the pads of the JST connector? 
+
+![alt text](Screenshots/14.png)
+
+Some things I've tried:
+- Check if the battery is dead, which is not.
+- Check for proper crimping of the connector (yep it is. Otherwise, how would've I be able to probe it inside of the jst connector of the battery.)
+- Tested for continuity between the red metal wire of the battery and the PCB pad of where the power source is supposed to go. Still didn't work
+- As mentioned in the fourth bullet point, I also tried it for the GND metal wire, same outcome.
+
+I have no idea exactly why this is happening. It should be a simple plug and play yet what I'm experiencing is something very weird and unusual. Perhaps there's something wrong with the orientation? I did tell JLCPCB to assemble the JST connector on the PCB board upside down (180 degrees), which shouldn't change how it should be. The footprint still is exactly how it is on the PCB.
+
+Whatever it is, I'll try to solve it.
+
+Total hours spent: 2 hours

@@ -42,7 +42,7 @@
 #define SCK 34
 #define CS 27
 #define DC 32
-#define RST 0
+#define RST 5
 
 const int SPIMAXFREQ = 3000000
 
