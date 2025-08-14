@@ -7,7 +7,7 @@ created_at: "2025-07-08"
 
 | Date started: July 7, 2025
 
-Total hours spent: 46 hours
+Total hours spent: 54 hours
 
 # Entry #0 - 07-07-25
 
@@ -300,3 +300,65 @@ I have no idea exactly why this is happening. It should be a simple plug and pla
 Whatever it is, I'll try to solve it.
 
 Total hours spent: 2 hours
+
+# Entry 12 - 08-13-25 - Finished up the firmware and testing it!
+
+Yep! So for this entry, I've managed to finish the firmware.
+
+Here are the things I've implemented:
+- Implemented a video of each frame to display on the TFT display.
+- Being able to display that picture at the end
+- Implemented and set up the thermal printer
+- Converting the RGB565 data into a bitmap for the printer to print
+- Polished the initialization part on some stuff
+
+Here's my favorite line of code(s) :D:
+
+![alt text](15.png)
+
+Here are also some obsidian notes of the things I've learnt:
+
+What is a RGB Bit Depth Map?
+- 2D grayscale images of the same size as the RGB images they are associated with
+- The gray level of each pixel of the depth map indicates the distane to the camera of its corresponding RGB Pixel
+Turning a RGB Bit Depth Map into a video for the camera
+- In order to tur nthe RGB Bit depth map into a video camera, we simply just need to put a while loop to loop through each frame
+- Of course, we need to add a delay in order to calculate for a certain FPS so that we may not overwhelm the MCU
+Basics of converting RGB565 data to its bitmap version:
+- Pixels
+	- The atoms of the image, "picture element" which is the smallest dot of an image
+	- Each pixel stores color information
+	- Ex:
+		- RGB565 ->  16 bits per pixel (5 red, 6 green, and 5 blue)
+		- Monochrome 1-bit -> 1 bit per pixel
+- Bitmap
+	- "The map of pixels"
+	- A bitmap is an array of pixel data laid out in memory, usually from left to right, top to bottom
+	- Each row is a scanline
+	- 8 pixels -> 1 byte
+So for turning the RGB data into a bitmap version:
+- Initialize the bitmap as an array of unsigned 8 bit integers using the dimensions of the picture
+- For each x and y bit of that picture, convert the RGB565 data into a monochrome pixel
+- Afterwards,   unpack RGB565 into its individual R, G, and B components
+- Measure the brightnenss (luminance) of each component
+- Use conditionals to set it up for a white or a black pixel by going to each byte and getting each bit's position to manipulate the bits value
+
+Now, moving onto the testing, I found out that the reason why the battery wouldn't provide any power.
+
+![alt text](16.png)
+
+I forgot to check DRC and rushed submitting this. Welp, time to cut that trace!
+
+Total hours spent: 5 hours
+
+# Entry 13 - 08-14-25 - Cutting the Trace and finding the short circuits
+
+For this entry, yes, I was able to cut that trace and was able to test continuity just fine.
+
+However, another problem came up.... how come theres still a short circuit between GND and my power rail? I tried searching for it but to no avail.
+
+It's just so hard to honestly pinpoint where the shortcircuit truly happened. There's too many factors to consider.
+![
+	
+](17.png>)
+Total hours spent: 3 hours
