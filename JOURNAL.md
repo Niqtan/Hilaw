@@ -358,7 +358,7 @@ For this entry, yes, I was able to cut that trace and was able to test continuit
 However, another problem came up.... how come theres still a short circuit between GND and my power rail? I tried searching for it but to no avail.
 
 It's just so hard to honestly pinpoint where the shortcircuit truly happened. There's too many factors to consider.
-![alt text](Screenshots/17.png>)
+![alt text](Screenshots/17.png)
 Total hours spent: 3 hours
  
  # Entry 13 - 08-16-25 Finding the root source of the short circuit
