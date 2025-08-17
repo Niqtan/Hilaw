@@ -7,7 +7,7 @@ created_at: "2025-07-08"
 
 | Date started: July 7, 2025
 
-Total hours spent: 54 hours
+Total hours spent: 57 hours
 
 # Entry #0 - 07-07-25
 
@@ -378,5 +378,5 @@ Boom! It now works! Wow the LED works omg! I'm so excited to make this work ngl.
 
 I'll try flashing the firmware next.
 
-Total hours spent: 5 hours
+Total hours spent: 3 hours
 
