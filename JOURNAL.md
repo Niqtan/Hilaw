@@ -314,7 +314,7 @@ Here are the things I've implemented:
 
 Here's my favorite line of code(s) :D:
 
-![alt text](15.png)
+![alt text](Screenshots/15.png)
 
 Here are also some obsidian notes of the things I've learnt:
 
@@ -345,7 +345,7 @@ So for turning the RGB data into a bitmap version:
 
 Now, moving onto the testing, I found out that the reason why the battery wouldn't provide any power.
 
-![alt text](16.png)
+![alt text](Screenshots/16.png)
 
 I forgot to check DRC and rushed submitting this. Welp, time to cut that trace!
 
@@ -358,7 +358,25 @@ For this entry, yes, I was able to cut that trace and was able to test continuit
 However, another problem came up.... how come theres still a short circuit between GND and my power rail? I tried searching for it but to no avail.
 
 It's just so hard to honestly pinpoint where the shortcircuit truly happened. There's too many factors to consider.
-![
-	
-](17.png>)
+![alt text](Screenshots/17.png>)
 Total hours spent: 3 hours
+ 
+ # Entry 13 - 08-16-25 Finding the root source of the short circuit
+
+ So for this entry, I've decided to do something clever. Since I ordered 5 boards, with 2 of them being assembled, I decided to make one of the assembled ones
+ into a test board. I was planning like to make the other one into the final thing. Hence, that's what I did.
+
+ ![alt text](Screenshots/18.jpg)
+
+Then, when I did that, I tried looking for the short. From desoldering capacitors, resistors, to even ICs. Eventually, I came to know that the one short circuiting was the battery management IC, BQ24075RGTR. I have no idea why it short circuits in my PCB. But honestly, knowing that It's not that important in my board, I removed it.
+
+![alt text](Screenshots/19.jpg)
+
+Boom! It now works! Wow the LED works omg! I'm so excited to make this work ngl. I tried testing the power on different parts of the board, and it seemed fine??
+
+![alt text](Screenshots/20.jpg)
+
+I'll try flashing the firmware next.
+
+Total hours spent: 5 hours
+

@@ -6,7 +6,7 @@
 //TFT Display
 
 #include <Adafruit_GFX.h>
-#include <Adafruit_IL9341.h>
+#include <Adafruit_ILI9341.h>
 
 //Camera
 #include "esp_camera.h"
@@ -76,6 +76,8 @@ Tprinter myPrinter(&printerSerial, printerBaudrate);
 
 Adafruit_ILI9341 tft = Adafruit_ILI9341(CS, DC, TFT_RST);
 
+camera_fb_t* renderImage;
+
 void setup() {
   //Initialize all communication protocols here
   micros();
@@ -113,9 +115,9 @@ void setup() {
     .pixel_format = PIXFORMAT_RGB565,
     .frame_size = FRAMESIZE_QVGA,
     .jpeg_quality = 12,
-    .fb_count = 1,
+    .fb_count = 1
 
-  }; 
+  };
   
   //Initialize the camera using the settings 
   esp_err_t ret_val = esp_camera_init(&camera_config);
@@ -152,7 +154,7 @@ void loop() {
       delay(10);
     }
     
-    displayImage(final_fb);
+    renderImage(final_fb);
     Serial.println("Photo captured successfully!");
 
     //Print out the photo using the thermal printer
@@ -161,7 +163,7 @@ void loop() {
     uint16_t picture_height = 288; // Makes it so that it looks shart wiuthout being huge 
 
     bitmap = convertToBitmap(RGB565_data, picture_width, picture_height);
-    printBitmap(bitmap, picture_width, picture_height, 1, true);
+    printer.printBitmap(bitmap, picture_width, picture_height, 1, true);
     Serial.println("Photo printed!");
     delay(100);
 
@@ -187,7 +189,7 @@ uint8_t* convertToBitmap(uint16_t *RGB565_data, uint16_t picture_width, uint16_t
   // Go over each pixel in the picture
   for (uint16_t y = 0; y < picture_height; y++) {
     for (uint16_t x = 0; x < picture_width; x++) {
-      uint16_t *pixel = RGB565_data[y * picture_width + x];
+      uint16_t pixel = RGB565_data[y * picture_width + x];
 
       // Right now, each pixel is monochrome (1-bit). 
       // Hence, we need to convert it back to the original 565 format
@@ -196,9 +198,9 @@ uint8_t* convertToBitmap(uint16_t *RGB565_data, uint16_t picture_width, uint16_t
       uint8_t b = pixel & 0x1F;
 
       // After conversion, measure the luminance (brightness)
-      r = (r * 255) / 31
-      g = (g * 255) / 63
-      b = (b * 255) / 31
+      r = (r * 255) / 31;
+      g = (g * 255) / 63;
+      b = (b * 255) / 31;
 
       uint8_t brightness = (r * 30 + g * 59 + b * 11) / 100;
       
@@ -220,7 +222,7 @@ uint8_t* convertToBitmap(uint16_t *RGB565_data, uint16_t picture_width, uint16_t
   return bitmap;
 }
 
-camera_fb_t* displayImage(fb) {
+camera_fb_t renderImage(camera_fb_t *fb) {
 
   uint16_t w = fb->width;
   uint16_t h = fb->height;
